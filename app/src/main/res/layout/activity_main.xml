@@ -236,7 +236,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:onClick="calculateTotalAmount"
-        android:text="Valor total"
+        android:text="Total Amount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
