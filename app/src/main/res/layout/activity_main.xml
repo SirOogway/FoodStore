@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/cbFlour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:onClick="defStateWhenChecked"
+        android:text="Flour"
+        app:layout_constraintEnd_toStartOf="@+id/btnFlourMore"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/costFlour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost: 2500"
+        app:layout_constraintEnd_toEndOf="@+id/cbFlour"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cbFlour"
+        app:layout_constraintTop_toBottomOf="@+id/cbFlour" />
+
+    <Button
+        android:id="@+id/btnFlourMore"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:onClick="addProduct"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/cbFlour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbFlour" />
+
+    <TextView
+        android:id="@+id/tvAmountFlour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFlourMore"
+        app:layout_constraintEnd_toStartOf="@+id/btnFlourLess"
+        app:layout_constraintStart_toEndOf="@+id/btnFlourMore"
+        app:layout_constraintTop_toTopOf="@+id/btnFlourMore" />
+
+    <Button
+        android:id="@+id/btnFlourLess"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:onClick="substractProduct"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/cbFlour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFlourMore"
+        app:layout_constraintTop_toTopOf="@+id/cbFlour" />
+
+    <CheckBox
+        android:id="@+id/cbCandy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:onClick="defStateWhenChecked"
+        android:text="Candy"
+        app:layout_constraintEnd_toStartOf="@+id/btnCandyMore"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbFlour" />
+
+    <TextView
+        android:id="@+id/costCandy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cost: 100"
+        app:layout_constraintEnd_toEndOf="@+id/cbCandy"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cbCandy"
+        app:layout_constraintTop_toBottomOf="@+id/cbCandy" />
+
+    <Button
+        android:id="@+id/btnCandyMore"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:onClick="addProduct"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/cbCandy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbCandy" />
+
+    <TextView
+        android:id="@+id/tvAmountCandy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCandyMore"
+        app:layout_constraintEnd_toStartOf="@+id/btnCandyLess"
+        app:layout_constraintStart_toEndOf="@+id/btnCandyMore"
+        app:layout_constraintTop_toTopOf="@+id/btnCandyMore" />
+
+    <Button
+        android:id="@+id/btnCandyLess"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:onClick="substractProduct"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/cbCandy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCandyMore"
+        app:layout_constraintTop_toTopOf="@+id/cbCandy" />
+
+    <CheckBox
+        android:id="@+id/cbToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:onClick="defStateWhenChecked"
+        android:text="Toast"
+        app:layout_constraintEnd_toStartOf="@+id/btnToastMore"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbCandy" />
+
+    <TextView
+        android:id="@+id/costTostada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cost: 3000"
+        app:layout_constraintEnd_toEndOf="@+id/cbToast"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cbToast"
+        app:layout_constraintTop_toBottomOf="@+id/cbToast" />
+
+    <Button
+        android:id="@+id/btnToastMore"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:onClick="addProduct"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/cbToast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbToast" />
+
+    <TextView
+        android:id="@+id/tvAmountToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btnToastMore"
+        app:layout_constraintEnd_toStartOf="@+id/btnToastLess"
+        app:layout_constraintStart_toEndOf="@+id/btnToastMore"
+        app:layout_constraintTop_toTopOf="@+id/btnToastMore" />
+
+    <Button
+        android:id="@+id/btnToastLess"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:onClick="substractProduct"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/cbToast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnToastMore"
+        app:layout_constraintTop_toTopOf="@+id/cbToast" />
+
+    <CheckBox
+        android:id="@+id/cbBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:onClick="defStateWhenChecked"
+        android:text="Bread"
+        app:layout_constraintEnd_toStartOf="@+id/btnBreadMore"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbToast" />
+
+    <TextView
+        android:id="@+id/costBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cost: 500"
+        app:layout_constraintEnd_toEndOf="@+id/cbBread"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cbBread"
+        app:layout_constraintTop_toBottomOf="@+id/cbBread" />
+
+    <Button
+        android:id="@+id/btnBreadMore"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:onClick="addProduct"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/cbBread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbBread" />
+
+    <TextView
+        android:id="@+id/tvAmountBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBreadMore"
+        app:layout_constraintEnd_toStartOf="@+id/btnBreadLess"
+        app:layout_constraintStart_toEndOf="@+id/btnBreadMore"
+        app:layout_constraintTop_toTopOf="@+id/btnBreadMore" />
+
+    <Button
+        android:id="@+id/btnBreadLess"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:onClick="substractProduct"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/cbBread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBreadMore"
+        app:layout_constraintTop_toTopOf="@+id/cbBread" />
+
+    <Button
+        android:id="@+id/btnTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:onClick="calculateTotalAmount"
+        android:text="Valor total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBreadMore" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/btnTotalAmount"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/btnTotalAmount"
+        app:layout_constraintTop_toBottomOf="@+id/btnTotalAmount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
